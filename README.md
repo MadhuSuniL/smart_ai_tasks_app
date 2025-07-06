@@ -1,39 +1,103 @@
-![image](https://github.com/user-attachments/assets/dbd13cbd-47c9-4b80-8f92-36a253232d6b)
+# 🌟 Smart AI Tasks – Context-Aware Task Planning with AI
 
+Smart AI Tasks is an intelligent task planner built using **Next.js** and **Tailwind CSS**. It helps users turn unstructured inputs like notes, emails, or WhatsApp messages into **structured, prioritized tasks** with AI assistance.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🔮 Whether you're a busy professional or a student, this app uses context-aware summarization and smart filtering to keep you organized — beautifully!
 
-## Getting Started
+---
 
-First, run the development server:
+## 📽 Preview Video
+
+Watch it in action 👉 [Smart AI Tasks - Demo](https://drive.google.com/file/d/1tzWPgDr1_kMtZitP_WCB9lPA-Hlx3DB1/view?usp=sharing)
+
+---
+
+## 🚀 Features
+
+- 🧠 AI-generated task suggestions from messy notes or chats  
+- 🌗 Dark mode with Tailwind support  
+- 🔍 Filter by status, priority, and category  
+- 📝 Import/export tasks via CSV  
+- 📆 Download `.ics` files for Google Calendar sync  
+- 🔐 JWT-based authentication with protected routes  
+- 📱 Mobile-first responsive design
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js (App Router), React, Tailwind CSS, Framer Motion, React Icons  
+- **Backend**: Django + DRF with AI Task generation logic (see [API Docs](https://documenter.getpostman.com/view/38405494/2sB34cnhXn))  
+- **Extras**: React Toastify, Typed.js, Axios, LocalStorage
+
+---
+
+## 🧑‍💻 Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/your-username/smart-todo-app.git
+cd smart-todo-app
+npm install
+````
+
+Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Project Structure
 
-## Learn More
+```bash
+app/
+ ├── dashboard/            # Task dashboard with filters & expand
+ ├── contexts/             # Add and view content-based task contexts
+ ├── suggested/            # AutoAI-suggested task management
+ ├── utils/                # API and localStorage utils
+ ├── components/           # UI components (DarkModeToggle, RequireAuth, etc.)
+ └── globals.css           # Tailwind CSS entry
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Environment Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You may need to create a `.env.local` file with your API base URL or keys:
 
-## Deploy on Vercel
+```env
+NEXT_PUBLIC_API_BASE=https://your-api-url.com/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Authentication
+
+This app uses **JWT-based auth** with protected routes via custom `RequireAuth` HOC. Access tokens are stored in `localStorage`.
+
+---
+
+## 🌐 Deployment
+
+You can easily deploy this app on [Vercel](https://vercel.com) or any static host that supports Next.js:
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! If you find a bug or have a feature request, please open an issue.
+
+---
+
+
+**Crafted with ❤️ by Madhu – Powered by AI + React + Tailwind**
